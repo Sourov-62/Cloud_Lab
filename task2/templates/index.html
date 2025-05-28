@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matrix Multiplication</title>
+</head>
+<body>
+    <h2>Matrix Multiplication</h2>
+    <form method="post">
+        <label>Matrix A:</label><br>
+        <input type="text" name="matrix_a" placeholder="[[1,2],[3,4]]" required><br><br>
+        
+        <label>Matrix B:</label><br>
+        <input type="text" name="matrix_b" placeholder="[[5,6],[7,8]]" required><br><br>
+
+        <input type="submit" value="Multiply">
+    </form>
+
+    {% if result %}
+        <h3>Result:</h3>
+        <p>{{ result }}</p>
+    {% endif %}
+    
+    {% if error %}
+        <h3 style="color:red">{{ error }}</h3>
+    {% endif %}
+</body>
+</html>
